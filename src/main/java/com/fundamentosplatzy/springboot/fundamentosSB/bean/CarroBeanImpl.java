@@ -6,4 +6,5 @@ public class CarroBeanImpl implements CarroBean{
     public int avanzar(int posicionInicial, int kilometros) {
         return posicionInicial + kilometros;
     }
+
 }
