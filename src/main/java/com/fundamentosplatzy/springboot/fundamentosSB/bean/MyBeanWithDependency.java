@@ -1,2 +1,6 @@
-package com.fundamentosplatzy.springboot.fundamentosSB.bean;public interface MyBeanWithDependency {
+package com.fundamentosplatzy.springboot.fundamentosSB.bean;
+
+public interface MyBeanWithDependency {
+    void printWithDependency();
+
 }
