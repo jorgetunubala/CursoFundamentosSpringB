@@ -14,5 +14,4 @@ public class TestController {
     public ResponseEntity<String> function(){
         return new ResponseEntity<>("Hello world from controller modificado sin reiniciar todo funcionando.", HttpStatus.OK);
     }
-
 }
