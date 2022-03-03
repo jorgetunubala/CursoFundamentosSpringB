@@ -16,15 +16,18 @@ public class FundamentosSbApplication implements CommandLineRunner {
 	private MyBeanWithDependency myBeanWithDependency;
 	private CarroBean carroBean;
 	private MiCarroConDependencia miCarroConDependencia;
+	private MyBeanConPropiedades myBeanConPropiedades;
 
 	public FundamentosSbApplication(@Qualifier("componentDos") ComponentDependency componentDependency, MyBean myBean, MyOperation myOperation,
-									MyBeanWithDependency myBeanWithDependency, CarroBean carroBean, MiCarroConDependencia miCarroConDependencia){
+									MyBeanWithDependency myBeanWithDependency, CarroBean carroBean, MiCarroConDependencia miCarroConDependencia,
+									MyBeanConPropiedades myBeanConPropiedades){
 		this.componentDependency = componentDependency;
 		this.myBean = myBean;
 		this.myOperation = myOperation;
 		this.myBeanWithDependency = myBeanWithDependency;
 		this.carroBean = carroBean;
 		this.miCarroConDependencia = miCarroConDependencia;
+		this.myBeanConPropiedades = myBeanConPropiedades;
 	}
 
 	public static void main(String[] args) {
@@ -37,5 +40,7 @@ public class FundamentosSbApplication implements CommandLineRunner {
 		myBean.print();
 		myBeanWithDependency.printWithDependency();
 		miCarroConDependencia.iniciarCarro();
+		System.out.println();
+		System.out.println(myBeanConPropiedades.function());
 	}
 }
